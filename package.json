@@ -1,0 +1,31 @@
+{
+  "name": "aurabot",
+  "version": "1.0.0",
+  "description": "A Facebook Chat Bot",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only index.ts",
+    "build": "tsc",
+    "setup": "node -e \"require('child_process').exec(process.platform === 'win32' ? 'setup.bat' : 'bash setup.sh', (e,o,s)=>{console.log(o);process.exit(s)})\""
+  },
+  "keywords": [
+    "facebook",
+    "chat",
+    "bot",
+    "typescript"
+  ],
+  "author": "DongDev",
+  "license": "MIT",
+  "dependencies": {
+    "@dongdev/fca-unofficial": "^3.0.21",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.0"
+  }
+}
